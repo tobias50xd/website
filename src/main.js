@@ -1,6 +1,7 @@
 import "@fontsource/roboto-mono/latin-400.css";
 import "@fontsource/roboto-mono/latin-500.css";
 import "./style.css";
+import thesisUrl from "../static/bachelor_thesis_tobiasseeanner.pdf?url";
 import {
   createIcons,
   Menu,
@@ -48,6 +49,8 @@ createIcons({
     X,
   },
 });
+
+document.querySelector("#thesis-link").href = thesisUrl;
 
 const menu = document.querySelector(".menu-toggle");
 const navigation = document.querySelector("#navigation");

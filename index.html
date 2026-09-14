@@ -6,7 +6,7 @@
     <meta name="theme-color" content="#101210" />
     <meta
       name="description"
-      content="Tobias Seeanner — computer science student, developer, and volunteer from Landshut. Explore my work in energy systems, navigation, and community sport."
+      content="Tobias Seeanner — cybersecurity student, developer, and volunteer based in Athens, GA. Explore my work in energy systems, navigation, and community sport."
     />
     <meta
       property="og:title"
@@ -14,7 +14,7 @@
     />
     <meta
       property="og:description"
-      content="A personal corner of the internet. Software, energy systems, and the people behind them."
+      content="A personal corner of the internet. Software, energy systems, and cybersecurity."
     />
     <meta property="og:type" content="website" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -48,7 +48,7 @@
         <div class="hero-top">
           <span><span class="status-dot"></span> PERSONAL WEBSITE / V.01</span
           ><span class="location"
-            ><i data-lucide="map-pin"></i> LANDSHUT, GERMANY</span
+            ><i data-lucide="map-pin"></i> ATHENS, GA</span
           >
         </div>
         <div class="hero-grid">
@@ -61,13 +61,13 @@
             </h1>
             <p class="hero-tagline">Code. Curiosity. <span>Community.</span></p>
             <p class="hero-description">
-              Computer science student. Developer. Team player.<br
+              Cybersecurity student. Developer. Team player.<br
                 class="desktop-break"
               />
               Exploring how technology can make a difference —<br
                 class="desktop-break"
               />
-              from power grids to the people around me.
+              from power grids to cybersecurity.
             </p>
             <div class="hero-actions">
               <a class="button primary" href="#projects"
@@ -125,11 +125,11 @@
               </p>
               <p>
                 &nbsp; based_in:
-                <span class="code-string">"Landshut, DE"</span>,
+                <span class="code-string">"Athens, GA"</span>,
               </p>
               <p>
-                &nbsp; studying:
-                <span class="code-string">"M.Sc. Computer Science"</span>,
+                &nbsp; field:
+                <span class="code-string">"Cybersecurity"</span>,
               </p>
               <p>
                 &nbsp; mindset:
@@ -147,7 +147,7 @@
         </div>
         <div class="hero-bottom">
           <span><span class="green">↓</span> SCROLL TO EXPLORE</span
-          ><span>SOFTWARE <b>·</b> SYSTEMS <b>·</b> PEOPLE</span>
+          ><span>SOFTWARE <b>·</b> SYSTEMS <b>·</b> CYBERSECURITY</span>
         </div>
       </section>
       <section
@@ -167,15 +167,18 @@
               >
             </h2>
             <p>
-              I’m Tobias, a computer science student from Landshut, Germany. I
+              I’m Tobias, a cybersecurity student based in Athens, GA. I
               enjoy understanding how systems work — and turning that
               understanding into something useful.
             </p>
             <p>
               My path has taken me from navigation systems at BMW to
-              decentralized energy research at the University of Passau. I’m now
+              decentralized energy research at the University of Passau, where
+              my bachelor’s thesis explored how energy cells can coordinate
+              regional electricity trading. I’m now
               studying for my M.Sc. in Computer Science at FAU
-              Erlangen-Nuremberg.
+              Erlangen-Nuremberg, with an exchange semester at the University of
+              Georgia’s School of Computing in Athens, GA.
             </p>
             <p>
               Away from the keyboard, you’ll find me on a badminton court,
@@ -191,6 +194,13 @@
           <aside class="education">
             <div class="small-heading">
               <i data-lucide="graduation-cap"></i> THE LEARNING PATH
+            </div>
+            <div class="timeline-item">
+              <span class="timeline-dot"></span
+              ><span class="date">ATHENS, GA</span>
+              <h3>Exchange semester</h3>
+              <p>University of Georgia · School of Computing</p>
+              <span class="tag green-tag">UGA</span>
             </div>
             <div class="timeline-item">
               <span class="timeline-dot current"></span
@@ -212,15 +222,6 @@
               <p>Technical University of Munich</p>
             </div>
           </aside>
-        </div>
-        <div class="toolbox">
-          <span class="eyebrow">MY TOOLBOX <span>→</span></span>
-          <div>
-            <span>Java</span><span>Python</span><span>C / C++</span
-            ><span>JavaScript</span><span>Kotlin</span><span>PHP</span
-            ><span>MIPS</span
-            ><span class="learning">Rust & Dart <small>↗ learning</small></span>
-          </div>
         </div>
       </section>
       <section
@@ -374,18 +375,81 @@
             <div class="card-meta">
               <span>BACHELOR’S THESIS</span><span>2024</span>
             </div>
-            <h3>Exploring power grids</h3>
-            <p>Tobias Seeanner · University of Passau</p>
+            <h3>Towards Self-Organization among Energy Cells</h3>
+            <p>Tobias Seeanner · University of Passau · April 23, 2024</p>
             <p class="paper-note">
-              A space for my bachelor’s thesis on power grids.<br />The full
-              title, abstract, and paper will be added here.
+              How can energy cells coordinate electricity trading using local
+              information? I developed a decentralized trading algorithm that
+              combines generation prices with transport costs derived from line
+              impedance, encouraging energy to be consumed close to where it
+              is produced.
             </p>
+            <details class="paper-details">
+              <summary>Explore the approach & findings</summary>
+              <h4>From concept to simulation</h4>
+              <p>
+                I extended the VDE cellular energy concept with principles of
+                self-organization and implemented an agent-based simulation
+                using Mesa. Each cell first discovers potential trading partners
+                within a price-limited range, then matches demand with affordable
+                supply using a modified merit-order rule. Higher-priority loads
+                are served first, with transport costs included in each offer.
+              </p>
+              <h4>What the experiments showed</h4>
+              <p>
+                Tests used two SimBench grid topologies with randomly generated
+                demand, supply, and prices. Trading converged in both networks,
+                with energy mostly balanced within a cell or with its direct
+                neighbors.
+              </p>
+              <table class="paper-results">
+                <caption>
+                  Simulated load coverage under the tested assumptions
+                </caption>
+                <thead>
+                  <tr>
+                    <th scope="col">Grid</th>
+                    <th scope="col">Cells</th>
+                    <th scope="col">Coverage</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">Meshed extra-high voltage</th>
+                    <td>571</td>
+                    <td>≈50%</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Radial medium voltage</th>
+                    <td>115</td>
+                    <td>≈44%</td>
+                  </tr>
+                </tbody>
+              </table>
+              <p>
+                The medium-voltage network’s higher transport costs and radial
+                structure kept trading more local, but reduced load coverage.
+                The findings highlight a tradeoff between regional exchange and
+                meeting demand.
+              </p>
+              <h4>Scope of the results</h4>
+              <p>
+                The model evaluates one 15-minute trading period on a fixed
+                topology with reliable participants. Transport costs approximate
+                grid losses using shortest-path impedance; the model does not
+                perform a power-flow analysis. Realistic demand and generation
+                profiles, trading across cell levels, and grid failures remain
+                future work.
+              </p>
+            </details>
             <span class="tag"
               ><i data-lucide="award"></i> IHK Prize 2024 nominee</span
             >
           </div>
-          <span class="paper-status"
-            ><span class="status-dot"></span> PUBLICATION COMING SOON</span
+          <a class="paper-status" id="thesis-link"
+            href="/static/bachelor_thesis_tobiasseeanner.pdf"
+            target="_blank" rel="noopener noreferrer"
+            >READ THESIS (PDF) ↗</a
           >
         </article>
       </section>

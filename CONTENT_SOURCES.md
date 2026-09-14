@@ -4,7 +4,17 @@ Reviewed 14 September 2026.
 
 ## Primary personal source
 
-`Curriculum_Vitae.pdf`, supplied by Tobias, provides education, LocalRES and BMW experience, technical skills, hobbies, club roles, email, and the IHK nomination. The earlier TUM period is presented as studies, not a completed degree. The master’s degree is presented as ongoing as stated in the supplied CV.
+`static/Curriculum_Vitae.pdf`, supplied by Tobias, provides education, LocalRES and BMW experience, technical skills, hobbies, club roles, email, and the IHK nomination. The earlier TUM period is presented as studies, not a completed degree. The master’s degree is presented as ongoing as stated in the supplied CV.
+
+`static/bachelor_thesis_tobiasseeanner.pdf`, supplied by Tobias, is the primary source for the thesis entry and its expandable research summary:
+
+- Page 1: formal title, author, university, and date (April 23, 2024).
+- Pages 27–38: assumptions, autonomous cells, impedance-based transport costs, partner discovery, and modified merit-order matching.
+- Pages 39–42: Mesa agent-based simulation, SimBench grid topologies (571 EHV cells and 115 MV cells), random input distributions, and one 15-minute trading period.
+- Pages 43–51: convergence and regionality in the tested simulations, approximately 50% EHV and 44% MV load coverage, and the tradeoff between regionality and coverage.
+- Pages 33 and 53: shortest-path impedance is an approximation, not a power-flow calculation; realistic profiles, trading between cell levels, and grid failures remain future work.
+
+The website reports simulation outcomes under these assumptions, not field measurements or demonstrated reductions in real grid losses. The PDF is bundled by Vite for the production thesis link. The IHK nomination remains sourced to the CV, not inferred from the thesis.
 
 ## Public sources
 
@@ -19,7 +29,6 @@ Reviewed 14 September 2026.
 ## Deliberate placeholders
 
 - Original pixel-art profile silhouette; visibly marked as awaiting a photo.
-- Bachelor’s thesis entry has a descriptive placeholder heading, not an invented formal title. No abstract, DOI, results, or publication status is fabricated. “Publication coming soon” refers to adding the document to this site, not an ongoing degree.
 
 ## User-supplied social profiles
 

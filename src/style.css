@@ -48,7 +48,8 @@ a:hover {
   color: var(--green);
 }
 button:focus-visible,
-a:focus-visible {
+a:focus-visible,
+summary:focus-visible {
   outline: 2px solid var(--green);
   outline-offset: 5px;
 }
@@ -826,6 +827,40 @@ h3 {
 .paper-info .tag svg {
   width: 12px;
   height: 12px;
+}
+.paper-info {
+  min-width: 0;
+}
+.paper-details {
+  margin: 18px 0;
+  font-size: 11px;
+}
+.paper-details summary {
+  color: var(--green);
+  cursor: pointer;
+}
+.paper-details h4 {
+  margin: 20px 0 8px;
+  font-size: 12px;
+}
+.paper-details p {
+  margin: 10px 0;
+}
+.paper-results {
+  width: 100%;
+  margin: 18px 0;
+  border-collapse: collapse;
+  font-size: 10px;
+}
+.paper-results caption {
+  text-align: left;
+  margin-bottom: 10px;
+}
+.paper-results th,
+.paper-results td {
+  padding: 8px 6px;
+  border-bottom: 1px solid var(--line);
+  text-align: left;
 }
 .paper-status {
   margin-left: auto;
