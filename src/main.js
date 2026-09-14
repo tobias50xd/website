@@ -116,7 +116,7 @@ const experience = {
     meta: "CURRENT / UNIVERSITY OF GEORGIA",
     title: "Automated program repair with privacy",
     role: "Research assistant · Noelo Lab, UGA School of Computing",
-    body: "<p>I’m currently a research assistant at Noelo Lab in the University of Georgia School of Computing, under the supervision of Prof. Dr. Zion Leonahenahe Basque.</p><h3>Research focus</h3><p>My research topic is automated program repair with privacy, within cybersecurity.</p>",
+    body: "<p>I’m currently a research assistant at Noelo Lab in the University of Georgia School of Computing, under the supervision of Professor Basque.</p><h3>Research focus</h3><p>My research topic is automated program repair with privacy, within cybersecurity.</p>",
     footer:
       '<a class="button primary" href="https://noelo.org/" target="_blank" rel="noopener noreferrer">Explore Noelo Lab ↗</a>',
   },
