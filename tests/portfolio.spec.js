@@ -51,8 +51,16 @@ test("filters select experience and details are keyboard accessible", async ({
 }) => {
   await page.goto("/");
   await page.getByRole("button", { name: "Research", exact: true }).click();
-  await expect(page.locator(".project-card:visible")).toHaveCount(1);
-  await expect(page.locator(".project-card:visible")).toContainText("LocalRES");
+  await expect(page.locator(".project-card:visible")).toHaveCount(2);
+  await expect(page.locator(".project-card:visible")).toContainText([
+    "Automated program repair with privacy",
+    "LocalRES",
+  ]);
+  await page.locator('[data-project="noelo"]').click();
+  await expect(page.getByRole("dialog")).toContainText("CURRENT");
+  await expect(page.getByRole("dialog")).toContainText("Basque");
+  await expect(page.getByRole("link", { name: "Explore Noelo Lab" })).toHaveAttribute("href", "https://noelo.org/");
+  await page.keyboard.press("Escape");
   await page.locator('[data-project="localres"]').click();
   await expect(page.getByRole("dialog")).toBeVisible();
   await expect(page.getByRole("dialog")).toContainText("JUN — NOV 2024");
@@ -64,8 +72,8 @@ test("filters select experience and details are keyboard accessible", async ({
   await page.locator('[data-project="bmw"]').click();
   await expect(page.getByRole("dialog")).toContainText("BMW Group");
   await page.getByRole("button", { name: "Close experience details" }).click();
-  await page.getByRole("button", { name: "All 02" }).click();
-  await expect(page.locator(".project-card:visible")).toHaveCount(2);
+  await page.getByRole("button", { name: "All 03" }).click();
+  await expect(page.locator(".project-card:visible")).toHaveCount(3);
 });
 
 test("phone navigation and internal links work", async ({ page }) => {
