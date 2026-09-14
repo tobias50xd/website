@@ -26,9 +26,9 @@ The website reports simulation outcomes under these assumptions, not field measu
 - Club leadership: https://www.postsportverein-landshut.de/1747-frischer-wind-f%C3%BCr-die-jugendleitung — February 2024 youth leadership article.
 - Club IT roles: https://www.postsportverein-landshut.de/kontakt — IT admin and webmaster. Current and historical roles are described together without claiming a new term in office.
 
-## Deliberate placeholders
+## User-supplied profile photo
 
-- Original pixel-art profile silhouette; visibly marked as awaiting a photo.
+- `static/tobi_cut.jpg` — supplied by Tobias and displayed in the homepage profile panel.
 
 ## User-supplied social profiles
 

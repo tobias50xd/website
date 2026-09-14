@@ -45,7 +45,7 @@ Browser checks cover layouts at 320, 390, 768, and 1440 pixels, WCAG A/AA automa
 - Page copy and section structure: `index.html`.
 - Project detail content and interactions: `src/main.js`.
 - Theme, spacing, and breakpoints: `src/style.css`.
-- Profile placeholder: `public/profile-placeholder.svg`. Replace the image and update the `src`, `alt`, and placeholder labels in `index.html`.
+- Profile photo: `static/tobi_cut.jpg`, referenced in `index.html` and bundled by Vite. Adjust its framing with `.portrait img` in `src/style.css`.
 - Thesis: the paper section is intentionally a placeholder. Add the actual title, abstract, and a public PDF when ready; no nonexistent download is offered.
 - Source notes: `CONTENT_SOURCES.md`.
 
