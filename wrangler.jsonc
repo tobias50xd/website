@@ -1,11 +1,23 @@
 {
   "$schema": "https://unpkg.com/wrangler/config-schema.json",
   "name": "tobias-seeanner-portfolio",
+  "main": "worker/index.js",
   "compatibility_date": "2026-09-14",
   "build": {
     "command": "npm run build"
   },
   "assets": {
-    "directory": "./dist"
-  }
+    "directory": "./dist",
+    "binding": "ASSETS",
+    "run_worker_first": ["/api/*"]
+  },
+  "vars": {
+    "CONTACT_TO": "tobias.seeanner@gmail.com"
+  },
+  "send_email": [
+    {
+      "name": "CONTACT_EMAIL",
+      "destination_address": "tobias.seeanner@gmail.com"
+    }
+  ]
 }

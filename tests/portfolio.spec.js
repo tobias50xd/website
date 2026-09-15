@@ -91,7 +91,7 @@ test("phone navigation and internal links work", async ({ page }) => {
       links.filter((a) => !document.querySelector(a.hash)).map((a) => a.hash),
     );
   expect(invalid).toEqual([]);
-  await expect(
-    page.locator('a[href="mailto:tobias.seeanner@gmail.com"]').first(),
-  ).toBeVisible();
+  await expect(page.getByRole("form", { name: "Contact Tobias" })).toBeVisible();
+  await expect(page.getByLabel("Your email", { exact: true })).toBeVisible();
+  await expect(page.locator('a[href^="mailto:"]')).toHaveCount(0);
 });

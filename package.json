@@ -7,7 +7,7 @@
     "dev": "vite --host 0.0.0.0",
     "build": "vite build",
     "preview": "vite preview --host 0.0.0.0",
-    "test": "playwright test"
+    "test": "node --test tests/worker.test.js && playwright test"
   },
   "dependencies": {
     "@fontsource/roboto-mono": "^5.2.8",

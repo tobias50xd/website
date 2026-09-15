@@ -168,3 +168,5 @@ dialog.addEventListener("close", () =>
   document.body.classList.remove("dialog-open"),
 );
 document.querySelector("#year").textContent = new Date().getFullYear();
+
+import "./contact.js";
