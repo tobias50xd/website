@@ -108,6 +108,16 @@ test("course projects expose source and playable demo links", async ({
     "Emergency Simulator",
     "Maze",
   ]);
-  await expect(page.locator("#projects [data-lucide='gitlab']")).toHaveCount(4);
+  await expect(page.locator("#projects [data-lucide='github']")).toHaveCount(1);
+  await expect(page.locator("#projects [data-lucide='gitlab']")).toHaveCount(3);
   await expect(page.locator("#projects [data-lucide='play']")).toHaveCount(4);
+  await expect(
+    page.getByRole("link", { name: "View Neon-Orbit source code on GitHub" }),
+  ).toHaveAttribute(
+    "href",
+    "https://github.com/ugavrclass2026/portfolio-1-tobias50xd/tree/demo1",
+  );
+  await expect(
+    page.getByRole("link", { name: "Launch the Neon-Orbit demo" }),
+  ).toHaveAttribute("href", "https://neon-orbit.tobiasseeanner.com/");
 });
