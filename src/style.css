@@ -1061,6 +1061,102 @@ h3 {
   display: flex;
   gap: 25px;
 }
+.course-projects {
+  background:
+    linear-gradient(135deg, #1b241640, transparent 45%),
+    radial-gradient(#b8cf7818 0.7px, transparent 0.7px);
+  background-size: auto, 12px 12px;
+}
+.course-projects-intro {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 40px;
+  margin-bottom: 30px;
+}
+.course-projects-intro > p {
+  max-width: 450px;
+  font-size: 11px;
+  line-height: 1.9;
+}
+.demo-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+.demo-card {
+  min-width: 0;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 20px;
+  min-height: 154px;
+  padding: 22px;
+  border: 1px solid var(--line);
+  background: #141712ed;
+  transition:
+    border-color 0.2s,
+    transform 0.2s;
+}
+.demo-card:hover {
+  border-color: #667d47;
+  transform: translateY(-2px);
+}
+.demo-index {
+  align-self: stretch;
+  display: grid;
+  place-items: center;
+  width: 42px;
+  border-right: 1px solid #34402c;
+  color: #6f7b65;
+  font-size: 9px;
+  letter-spacing: 1px;
+}
+.demo-copy {
+  min-width: 0;
+}
+.demo-meta {
+  color: #8da077;
+  font-size: 8px;
+  letter-spacing: 0.8px;
+}
+.demo-copy h3 {
+  margin: 8px 0 5px;
+  font-size: 16px;
+}
+.demo-copy > p:last-child {
+  font-size: 9px;
+  line-height: 1.6;
+}
+.demo-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.demo-actions a {
+  min-width: 92px;
+  min-height: 36px;
+  padding: 7px 11px;
+  border: 1px solid #394433;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #aeb8a4;
+  font-size: 9px;
+}
+.demo-actions a:hover {
+  border-color: var(--green);
+  color: var(--green);
+}
+.demo-actions .demo-play {
+  border-color: #52673b;
+  color: var(--green);
+  background: #c3f36b08;
+}
+.demo-actions svg {
+  width: 14px;
+  height: 14px;
+}
 footer.section-wrap {
   border-top: 1px solid var(--line);
   padding-top: 26px;
@@ -1241,6 +1337,12 @@ dialog h2 {
   }
   .contact-row h2 {
     font-size: 38px;
+  }
+  .demo-card {
+    grid-template-columns: minmax(0, 1fr) auto;
+  }
+  .demo-index {
+    display: none;
   }
 }
 @media (max-width: 800px) {
@@ -1431,6 +1533,14 @@ dialog h2 {
   }
   .contact-row h2 {
     font-size: 32px;
+  }
+  .course-projects-intro {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .demo-grid {
+    grid-template-columns: 1fr;
   }
   footer > span {
     display: none;
@@ -1773,6 +1883,37 @@ dialog h2 {
   }
   .contact-links > div {
     gap: 26px;
+  }
+  .course-projects-intro {
+    margin-bottom: 23px;
+  }
+  .course-projects-intro > p {
+    font-size: 10px;
+  }
+  .demo-card {
+    min-height: 0;
+    padding: 19px;
+    gap: 14px;
+  }
+  .demo-copy h3 {
+    font-size: 15px;
+  }
+  .demo-actions a {
+    min-width: 38px;
+    width: 38px;
+    justify-content: center;
+    padding: 7px;
+  }
+  .demo-actions a > span {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
   }
   footer.section-wrap {
     padding-top: 22px;

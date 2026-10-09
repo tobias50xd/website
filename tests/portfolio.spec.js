@@ -95,3 +95,19 @@ test("phone navigation and internal links work", async ({ page }) => {
   await expect(page.getByLabel("Your email", { exact: true })).toBeVisible();
   await expect(page.locator('a[href^="mailto:"]')).toHaveCount(0);
 });
+
+test("course projects expose source and playable demo links", async ({
+  page,
+}) => {
+  await page.goto("/");
+  const projects = page.locator("#projects .demo-card");
+  await expect(projects).toHaveCount(4);
+  await expect(projects).toContainText([
+    "Neon-Orbit",
+    "Badminton Trainer",
+    "Emergency Simulator",
+    "Maze",
+  ]);
+  await expect(page.locator("#projects [data-lucide='gitlab']")).toHaveCount(4);
+  await expect(page.locator("#projects [data-lucide='play']")).toHaveCount(4);
+});

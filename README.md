@@ -2,6 +2,17 @@
 
 An original responsive portfolio with a charcoal/lime palette, locally hosted Roboto Mono, and subtle terminal-inspired details. Built with Vite, vanilla JavaScript, and Lucide icons. A Cloudflare Worker handles contact submissions with Turnstile verification and email delivery. No analytics or third-party font requests. Built by an AI.
 
+## Course projects
+
+The final **Projects** section showcases four interactive demos:
+
+- Neon-Orbit — Demo1 · Virtual Reality · CSCI 4830 / 6830 · Fall 2026
+- Badminton Trainer — Demo2 · Virtual Reality · CSCI 4830 / 6830 · Fall 2026
+- Emergency Simulator — Demo3 · details coming soon
+- Maze — Demo4 · details coming soon
+
+Each entry has a GitLab source link and a play link. The initial placeholder URLs live directly in `index.html`: replace the `https://gitlab.com/your-username/...` and `https://example.com/...` values with the real project URLs when they are ready.
+
 ## Run locally
 
 Requires Node.js 20.19+ or 22.12+.
@@ -57,6 +68,7 @@ Browser checks cover layouts at 320, 390, 768, and 1440 pixels, WCAG A/AA automa
 ## Editing
 
 - Page copy and section structure: `index.html`.
+- Course project titles, descriptions, source links, and demo links: the `#projects` section in `index.html`.
 - Project detail content and interactions: `src/main.js`.
 - Theme, spacing, and breakpoints: `src/style.css`.
 - Profile photo: `static/tobi_cut.jpg`, referenced in `index.html` and bundled by Vite. Adjust its framing with `.portrait img` in `src/style.css`.
