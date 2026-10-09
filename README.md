@@ -6,10 +6,10 @@ An original responsive portfolio with a charcoal/lime palette, locally hosted Ro
 
 The final **Projects** section showcases four interactive demos:
 
-- Neon-Orbit — Demo1 · Virtual Reality · CSCI 4830 / 6830 · Fall 2026
+- Neon-Orbit — Demo1 · Web Game · CSCI 4830 / 6830 · Fall 2026
 - Badminton Trainer — Demo2 · Virtual Reality · CSCI 4830 / 6830 · Fall 2026
-- Emergency Simulator — Demo3 · details coming soon
-- Maze — Demo4 · details coming soon
+- Emergency Simulator — Demo3 · Web Game · CSCI 4830 / 6830 · Fall 2026
+- Maze — Demo4 · Virtual Reality · CSCI 4830 / 6830 · Fall 2026
 
 Each entry has a GitLab source link and a play link. The initial placeholder URLs live directly in `index.html`: replace the `https://gitlab.com/your-username/...` and `https://example.com/...` values with the real project URLs when they are ready.
 
