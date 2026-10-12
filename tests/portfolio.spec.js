@@ -96,7 +96,7 @@ test("phone navigation and internal links work", async ({ page }) => {
   await expect(page.locator('a[href^="mailto:"]')).toHaveCount(0);
 });
 
-test("course projects expose source and playable demo links", async ({
+test("course projects expose source and project action links", async ({
   page,
 }) => {
   await page.goto("/");
@@ -108,9 +108,10 @@ test("course projects expose source and playable demo links", async ({
     "Emergency Simulator",
     "Maze",
   ]);
-  await expect(page.locator("#projects [data-lucide='github']")).toHaveCount(1);
-  await expect(page.locator("#projects [data-lucide='gitlab']")).toHaveCount(3);
-  await expect(page.locator("#projects [data-lucide='play']")).toHaveCount(4);
+  await expect(page.locator("#projects [data-lucide='github']")).toHaveCount(3);
+  await expect(page.locator("#projects [data-lucide='gitlab']")).toHaveCount(1);
+  await expect(page.locator("#projects [data-lucide='play']")).toHaveCount(3);
+  await expect(page.locator("#projects [data-lucide='package']")).toHaveCount(1);
   await expect(
     page.getByRole("link", { name: "View Neon-Orbit source code on GitHub" }),
   ).toHaveAttribute(
@@ -118,6 +119,32 @@ test("course projects expose source and playable demo links", async ({
     "https://github.com/ugavrclass2026/portfolio-1-tobias50xd/tree/demo1",
   );
   await expect(
+    page.getByRole("link", {
+      name: "View Emergency Simulator source code on GitHub",
+    }),
+  ).toHaveAttribute(
+    "href",
+    "https://github.com/ugavrclass2026/portfolio-1-tobias50xd/tree/demo3",
+  );
+  await expect(
+    page.getByRole("link", { name: "View Maze source code on GitHub" }),
+  ).toHaveAttribute(
+    "href",
+    "https://github.com/ugavrclass2026/portfolio-1-tobias50xd/tree/demo4",
+  );
+  await expect(
     page.getByRole("link", { name: "Launch the Neon-Orbit demo" }),
   ).toHaveAttribute("href", "https://neon-orbit.tobiasseeanner.com/");
+  await expect(
+    page.getByRole("link", { name: "Download the Badminton Trainer APK" }),
+  ).toHaveAttribute(
+    "href",
+    "https://github.com/ugavrclass2026/portfolio-1-tobias50xd/releases",
+  );
+  await expect(
+    page.getByRole("link", { name: "Launch the Emergency Simulator demo" }),
+  ).toHaveAttribute(
+    "href",
+    "https://roadside-rescue.tobiasseeanner.com/",
+  );
 });

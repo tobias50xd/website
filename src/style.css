@@ -1148,7 +1148,8 @@ h3 {
   border-color: var(--green);
   color: var(--green);
 }
-.demo-actions .demo-play {
+.demo-actions .demo-play,
+.demo-actions .demo-artifact {
   border-color: #52673b;
   color: var(--green);
   background: #c3f36b08;
