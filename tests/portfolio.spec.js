@@ -106,7 +106,7 @@ test("course projects expose source and project action links", async ({
     "Neon-Orbit",
     "Badminton Trainer",
     "Emergency Simulator",
-    "Maze",
+    "The Sunken Depths",
   ]);
   await expect(page.locator("#projects [data-lucide='github']")).toHaveCount(3);
   await expect(page.locator("#projects [data-lucide='gitlab']")).toHaveCount(1);
@@ -127,7 +127,9 @@ test("course projects expose source and project action links", async ({
     "https://github.com/ugavrclass2026/portfolio-1-tobias50xd/tree/demo3",
   );
   await expect(
-    page.getByRole("link", { name: "View Maze source code on GitHub" }),
+    page.getByRole("link", {
+      name: "View The Sunken Depths source code on GitHub",
+    }),
   ).toHaveAttribute(
     "href",
     "https://github.com/ugavrclass2026/portfolio-1-tobias50xd/tree/demo4",
@@ -146,5 +148,11 @@ test("course projects expose source and project action links", async ({
   ).toHaveAttribute(
     "href",
     "https://roadside-rescue.tobiasseeanner.com/",
+  );
+  await expect(
+    page.getByRole("link", { name: "Launch The Sunken Depths demo" }),
+  ).toHaveAttribute(
+    "href",
+    "https://sunken-depths.tobiasseeanner.com/",
   );
 });

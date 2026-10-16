@@ -9,9 +9,9 @@ The final **Projects** section showcases four interactive demos:
 - Neon-Orbit — Demo1 · Web Game · CSCI 4830 / 6830 · Fall 2026
 - Badminton Trainer — Demo2 · Virtual Reality · CSCI 4830 / 6830 · Fall 2026
 - Emergency Simulator — Demo3 · Web Game · CSCI 4830 / 6830 · Fall 2026
-- Maze — Demo4 · Virtual Reality · CSCI 4830 / 6830 · Fall 2026
+- The Sunken Depths — Demo4 · Virtual Reality · CSCI 4830 / 6830 · Fall 2026
 
-Each entry has a source link and a project action link. Demo2 uses an APK artifact button; the web projects use play buttons. The remaining placeholder URLs live directly in `index.html`: replace the `https://gitlab.com/your-username/...` and `https://example.com/...` values with the real project URLs when they are ready.
+Each entry has a source link and a project action link. Demo2 uses an APK artifact button; the web projects use play buttons. The remaining placeholder source URL lives directly in `index.html`: replace the `https://gitlab.com/your-username/...` value when the real project URL is ready.
 
 ## Run locally
 
