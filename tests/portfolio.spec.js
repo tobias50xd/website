@@ -110,12 +110,18 @@ test("course projects expose source and project action links", async ({
     "Demo 5",
     "Demo 6",
   ]);
-  await expect(page.locator("#projects [data-lucide='github']")).toHaveCount(4);
+  await expect(page.locator("#projects [data-lucide='github']")).toHaveCount(5);
   await expect(page.locator("#projects [data-lucide='gitlab']")).toHaveCount(1);
-  await expect(page.locator("#projects [data-lucide='play']")).toHaveCount(3);
+  await expect(page.locator("#projects [data-lucide='play']")).toHaveCount(5);
   await expect(page.locator("#projects [data-lucide='package']")).toHaveCount(1);
-  await expect(projects.nth(4)).toContainText("COMING SOON");
-  await expect(projects.nth(5)).toContainText("COMING SOON");
+  for (const project of [projects.nth(4), projects.nth(5)]) {
+    await expect(project).toContainText("VIRTUAL REALITY");
+    await expect(project).toContainText("CSCI 4830 / 6830 · Fall 2026");
+    await expect(project.getByRole("button", { name: /Play/ })).toBeDisabled();
+  }
+  await expect(
+    projects.nth(5).getByRole("button", { name: /source code/ }),
+  ).toBeDisabled();
   await expect(projects.nth(5).getByRole("link")).toHaveCount(0);
   await expect(
     page.getByRole("link", { name: "View Demo 5 source code on GitHub" }),

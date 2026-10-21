@@ -10,10 +10,10 @@ The final **Projects** section showcases four interactive demos and two placehol
 - Badminton Trainer — Demo2 · Virtual Reality · CSCI 4830 / 6830 · Fall 2026
 - Emergency Simulator — Demo3 · Web Game · CSCI 4830 / 6830 · Fall 2026
 - The Sunken Depths — Demo4 · Virtual Reality · CSCI 4830 / 6830 · Fall 2026
-- Demo 5 — Coming soon · source code available on the `demo5` GitHub branch
-- Demo 6 — Coming soon
+- Demo 5 — Virtual Reality · CSCI 4830 / 6830 · Fall 2026 · source code available on the `demo5` GitHub branch
+- Demo 6 — Virtual Reality · CSCI 4830 / 6830 · Fall 2026
 
-The first four entries have a source link and a project action link. Demo2 uses an APK artifact button; the web projects use play buttons. Demo 5 has a source link, while Demo 6 awaits project links. The remaining placeholder source URL lives directly in `index.html`: replace the `https://gitlab.com/your-username/...` value when the real project URL is ready.
+The first four entries have a source link and a project action link. Demo2 uses an APK artifact button; the web projects use play buttons. Demo 5 has a Src link and a disabled Play placeholder. Demo 6 has disabled Src and Play placeholders. Replace the placeholder buttons in `index.html` with links when their URLs are ready. The remaining placeholder source URL lives directly in `index.html`: replace the `https://gitlab.com/your-username/...` value when the real project URL is ready.
 
 ## Run locally
 
