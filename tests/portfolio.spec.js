@@ -101,17 +101,28 @@ test("course projects expose source and project action links", async ({
 }) => {
   await page.goto("/");
   const projects = page.locator("#projects .demo-card");
-  await expect(projects).toHaveCount(4);
+  await expect(projects).toHaveCount(6);
   await expect(projects).toContainText([
     "Neon-Orbit",
     "Badminton Trainer",
     "Emergency Simulator",
     "The Sunken Depths",
+    "Demo 5",
+    "Demo 6",
   ]);
-  await expect(page.locator("#projects [data-lucide='github']")).toHaveCount(3);
+  await expect(page.locator("#projects [data-lucide='github']")).toHaveCount(4);
   await expect(page.locator("#projects [data-lucide='gitlab']")).toHaveCount(1);
   await expect(page.locator("#projects [data-lucide='play']")).toHaveCount(3);
   await expect(page.locator("#projects [data-lucide='package']")).toHaveCount(1);
+  await expect(projects.nth(4)).toContainText("COMING SOON");
+  await expect(projects.nth(5)).toContainText("COMING SOON");
+  await expect(projects.nth(5).getByRole("link")).toHaveCount(0);
+  await expect(
+    page.getByRole("link", { name: "View Demo 5 source code on GitHub" }),
+  ).toHaveAttribute(
+    "href",
+    "https://github.com/ugavrclass2026/portfolio-1-tobias50xd/tree/demo5",
+  );
   await expect(
     page.getByRole("link", { name: "View Neon-Orbit source code on GitHub" }),
   ).toHaveAttribute(
